@@ -8,6 +8,7 @@ $channelSecret = '8c6680a1a79aa1a4f5a5840964848af6';//Your Channel Secret
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
+$groupId 	= $client->parseEvents()[0]['source']['groupId'];
 $userId 	= $client->parseEvents()[0]['source']['userId'];
 $replyToken = $client->parseEvents()[0]['replyToken'];
 $message 	= $client->parseEvents()[0]['message'];
@@ -31,12 +32,11 @@ if($message['type']=='sticker')
 }
 else
 $pesan=str_replace(" ", "%20", $pesan_datang);
-$key = 'API KEY SIMSIMI ENTE'; //API SimSimi
-$url = 'http://sandbox.api.simsimi.com/request.p?key='.$key.'&lc=id&ft=1.0&text='.$pesan;
+$usernm = str_replace(" ", "%20", $profil->displayName);
+$url = 'http://karyakreatif.com/tebakkata2/?pesan='.$pesan.'&gr='.$groupId.'&u='.$userId.'&un='.$usernm;
 $json_data = file_get_contents($url);
 $url=json_decode($json_data,1);
-//$diterima = $url['response'];
-$diterima = $pesan;
+$diterima = $url['response'];
 if($message['type']=='text')
 {
 if($url['result'] == 404)
