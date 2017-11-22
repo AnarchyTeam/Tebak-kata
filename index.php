@@ -36,7 +36,7 @@ $usernm = str_replace(" ", "%20", $profil->displayName);
 $url = 'http://karyakreatif.com/tebakkata2/?pesan='.$pesan.'&gr='.$groupId.'&u='.$userId.'&un='.$usernm;
 $json_data = file_get_contents($url);
 $url=json_decode($json_data,1);
-$diterima = $url['response'];
+$diterima = $pesan.$profil->displayName;
 if($message['type']=='text')
 {
 if($url['result'] == 404)
