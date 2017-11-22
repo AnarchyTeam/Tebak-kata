@@ -35,7 +35,7 @@ $key = 'API KEY SIMSIMI ENTE'; //API SimSimi
 $url = 'http://sandbox.api.simsimi.com/request.p?key='.$key.'&lc=id&ft=1.0&text='.$pesan;
 $json_data = file_get_contents($url);
 $url=json_decode($json_data,1);
-$diterima = $url['response'];
+//$diterima = $url['response'];
 $diterima = $pesan;
 if($message['type']=='text')
 {
