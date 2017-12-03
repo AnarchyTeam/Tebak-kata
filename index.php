@@ -2,9 +2,8 @@
 
 require_once('./line_class.php');
 
-$channelAccessToken = '4fAUzLrBwgVLBRabPdu1FUyd5ulUBgxhfssDecRl4zso4iyCWJgAn/rIe6fwmbT//WrlF0QG06+2Q2UQxjKzMI/oIrPC9N0dtDEtsj6dU2ycWF65L+euCNyJAbOBqVXsVRUO77yXqaAF9oJPwkrDIwdB04t89/1O/w1cDnyilFU=
-'; //Your Channel Access Token
-$channelSecret = '1547f01580b29e650bce95fa14714497';//Your Channel Secret
+$channelAccessToken = 'qUBeCF8C+bQEv8uQyj9mUSz4ql/qEa+f2tMMzsgzUlMtgY9cYAdNYs7riT70MpkdudhNWnVXcUago/8qPWm7cNxPlcN5wiF9nlSd2do5OweIFS9xf4EiwiWhBgvqc0tUtGBJoxqg5TNCyYS7J8ZmuAdB04t89/1O/w1cDnyilFU='; //Your Channel Access Token
+$channelSecret = '9c810b42991197bce02b13b837c24681';//Your Channel Secret
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -23,7 +22,7 @@ if($message['type']=='sticker')
 							'messages' => array(
 								array(
 										'type' => 'text',									
-										'text' => 'Terima Kasih Stikernya.'										
+										'text' => 'Jangan spam stciker ??.'										
 									
 									)
 							)
