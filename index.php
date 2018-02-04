@@ -2,8 +2,8 @@
 
 require_once('./line_class.php');
 
-$channelAccessToken = 'qUBeCF8C+bQEv8uQyj9mUSz4ql/qEa+f2tMMzsgzUlMtgY9cYAdNYs7riT70MpkdudhNWnVXcUago/8qPWm7cNxPlcN5wiF9nlSd2do5OweIFS9xf4EiwiWhBgvqc0tUtGBJoxqg5TNCyYS7J8ZmuAdB04t89/1O/w1cDnyilFU='; //Your Channel Access Token
-$channelSecret = '9c810b42991197bce02b13b837c24681';//Your Channel Secret
+$channelAccessToken = 'k/+WdpkSoZof/xgLClTWtxKAI/MqqJEwyB3Rjydp5jbAUMSVR/PELhxjbsJI9dwSbVLRX/f1gzhhDJ14cIIqBkD9XTrPhF8ecmdUqfw8p884zghRxnMVvZvbDP0ItLB11LLep1Ye/wmwT/uJXVNo1QdB04t89/1O/w1cDnyilFU='; //Your Channel Access Token
+$channelSecret = 'c41d451e0f42f191c338b27603879566';//Your Channel Secret
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -63,7 +63,7 @@ if($url['result'] != 100)
 							'messages' => array(
 								array(
 										'type' => 'text',					
-										'text' => 'Maaf '.$profil->displayName.' Server Kami Sedang Sibuk Sekarang.'
+										'text' => 'Maaf '.$profil->displayName.'  Maaf Bots Sedang Di Perbaiki'
 									)
 							)
 						);
